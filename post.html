@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post Internship — CollabCore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Collab<span>Core</span></a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="post.html" class="active">Post Internship</a></li>
+        <li><a href="internships.html">Available Internships</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">For Companies</p>
+      <h1>Post an Internship</h1>
+      <p class="page-desc">Share the details of your open role. Students will be able to see it on the Available Internships page.</p>
+    </section>
+
+    <section class="form-section">
+      <form id="postForm" class="card-form">
+
+        <div class="form-group">
+          <label for="companyName">Company Name</label>
+          <input type="text" id="companyName" name="companyName" placeholder="e.g. TechNova Solutions" required />
+          <span class="error-text" id="companyNameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="internshipTitle">Internship Title</label>
+          <input type="text" id="internshipTitle" name="internshipTitle" placeholder="e.g. Web Development Intern" required />
+          <span class="error-text" id="internshipTitleError"></span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" placeholder="e.g. Remote / Dhaka" required />
+            <span class="error-text" id="locationError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="duration">Duration</label>
+            <input type="text" id="duration" name="duration" placeholder="e.g. 3 Months" required />
+            <span class="error-text" id="durationError"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" name="description" rows="5" placeholder="Briefly describe the role, responsibilities, and requirements..." required></textarea>
+          <span class="error-text" id="descriptionError"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Post Internship</button>
+
+        <div class="success-message" id="postSuccess" role="status" aria-live="polite" hidden>
+          ✅ Internship Posted Successfully!
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 CollabCore. Built as a college project.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

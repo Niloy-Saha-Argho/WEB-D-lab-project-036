@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Available Internships — CollabCore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Collab<span>Core</span></a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="post.html">Post Internship</a></li>
+        <li><a href="internships.html" class="active">Available Internships</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">For Students</p>
+      <h1>Available Internships</h1>
+      <p class="page-desc">Browse open roles below and apply directly — it only takes a minute.</p>
+    </section>
+
+    <section class="internship-grid">
+
+      <article class="internship-card">
+        <span class="tag">Web Development Intern</span>
+        <h3>TechNova Solutions</h3>
+        <p class="meta">📍 Remote &nbsp;·&nbsp; 🕒 3 Months</p>
+        <p class="card-desc">Work with our engineering team to build and maintain responsive web features using HTML, CSS, and JavaScript.</p>
+        <button class="btn btn-primary apply-btn" data-title="Web Development Intern" data-company="TechNova Solutions">Apply</button>
+      </article>
+
+      <article class="internship-card">
+        <span class="tag">UI/UX Designer Intern</span>
+        <h3>PixelCraft Studio</h3>
+        <p class="meta">📍 Hybrid &nbsp;·&nbsp; 🕒 2 Months</p>
+        <p class="card-desc">Assist in designing wireframes, prototypes, and user flows for web and mobile applications.</p>
+        <button class="btn btn-primary apply-btn" data-title="UI/UX Designer Intern" data-company="PixelCraft Studio">Apply</button>
+      </article>
+
+     
+
+     
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 CollabCore. Built as a college project.</p>
+  </footer>
+
+  <!-- Application Modal -->
+  <div class="modal-overlay" id="applyModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close application form">&times;</button>
+
+      <p class="eyebrow">Apply for</p>
+      <h3 id="modalTitle">Internship Title</h3>
+      <p class="modal-company" id="modalCompany">Company Name</p>
+
+      <form id="applyForm">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Your full name" required />
+          <span class="error-text" id="fullNameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          <span class="error-text" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="university">University</label>
+          <input type="text" id="university" name="university" placeholder="Your university name" required />
+          <span class="error-text" id="universityError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="skills">Skills</label>
+          <input type="text" id="skills" name="skills" placeholder="e.g. HTML, CSS, JavaScript" required />
+          <span class="error-text" id="skillsError"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+
+        <div class="success-message" id="applySuccess" role="status" aria-live="polite" hidden>
+          ✅ Application Submitted Successfully!
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
